@@ -5,15 +5,17 @@
 //  Created by Ahad Hussain on 6/8/22.
 //
 
-import Foundation
+import SwiftUI
 
-struct detail {
-    // add more code
-    
-    // Todo
-        // create a class that holds all of the details of a user. 
-    // Todo
-        // create an object of that class and store in a vector
-    // Todo
-        // sort vector by attributes and add filters
+struct DetailView: View {
+    var body: some View {
+        Text("Hello, world!")
+            .padding()
+    }
+}
+
+struct DetialView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
