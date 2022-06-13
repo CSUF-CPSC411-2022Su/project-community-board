@@ -9,4 +9,5 @@ import Foundation
 
 struct detailView {
     // TODO: complete detailView struct
+    
 }
