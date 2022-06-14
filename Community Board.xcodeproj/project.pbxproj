@@ -16,7 +16,6 @@
 		7A241E152851481D009BD84F /* Community_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241E142851481D009BD84F /* Community_BoardUITestsLaunchTests.swift */; };
 		7A241E2228514897009BD84F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E2128514897009BD84F /* .gitignore */; };
 		7A241E24285148E6009BD84F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E23285148E6009BD84F /* .gitattributes */; };
-		7A2EFE5328514D98000CC5BB /* detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2EFE5228514D98000CC5BB /* detail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 		7A241E142851481D009BD84F /* Community_BoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_BoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A241E2128514897009BD84F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A241E23285148E6009BD84F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
-		7A2EFE5228514D98000CC5BB /* detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +100,10 @@
 		7A241DF62851481A009BD84F /* Community Board */ = {
 			isa = PBXGroup;
 			children = (
-				7A241DF72851481A009BD84F /* Community_BoardApp.swift */,
 				7A241DF92851481A009BD84F /* ContentView.swift */,
+				7A241DF72851481A009BD84F /* Community_BoardApp.swift */,
 				7A241DFB2851481D009BD84F /* Assets.xcassets */,
 				7A241DFD2851481D009BD84F /* Preview Content */,
-				7A2EFE5228514D98000CC5BB /* detail.swift */,
 			);
 			path = "Community Board";
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2EFE5328514D98000CC5BB /* detail.swift in Sources */,
 				7A241DFA2851481A009BD84F /* ContentView.swift in Sources */,
 				7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */,
 			);
@@ -429,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Community Board/Preview Content\"";
-				DEVELOPMENT_TEAM = TA7FN93KC8;
+				DEVELOPMENT_TEAM = ML54TVUV5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -442,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.communityboard.Community-Board";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.communityboard.Community-Board-Detail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,7 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Community Board/Preview Content\"";
-				DEVELOPMENT_TEAM = TA7FN93KC8;
+				DEVELOPMENT_TEAM = ML54TVUV5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -471,7 +467,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.communityboard.Community-Board";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullerton.ecs.communityboard.Community-Board-Detail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
