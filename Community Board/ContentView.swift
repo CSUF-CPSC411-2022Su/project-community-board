@@ -59,32 +59,34 @@ struct Comment: View {
         NavigationView {
             VStack {
                 HStack {
-                Text("Crosswalk Submission")
+                Text("Body")
                     .bold()
                     .font(.largeTitle)
                 }
                 .padding(.bottom, 30)
 
                 HStack {
-                    Text("Crosswalk Name")
+                    Text("Subject")
                         .bold()
                     Spacer()
                 }
+                .padding(.bottom, 5)
+
                 .padding(.bottom, 20)
                 HStack {
-                    Text("Crosswalk address")
+                    Text("Body")
                         .bold()
                     Spacer()
                 }
-                {
-                    Text("Submit")
-                }
+                .padding(.bottom, 5)
+
                 Spacer()
             }
             .padding()
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
