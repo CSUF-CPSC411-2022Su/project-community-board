@@ -8,29 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var title: String = "TITLE"
-    @State var name: String = "NAME"
-    @State var location: String = "LOCATION"
-    @State var phone: String = "PHONE"
-    @State var description: String = "DESCRIPTION"
+    @State var title: String = "Plant Trees In The Park"
+    @State var name: String = "Sally B."
+    @State var location: String = "Hyde Park"
+    @State var phone: String = "555-555-5555"
+    @State var description: String = "We are planting trees in the park to help the community grow."
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Information about INSERT_PROJECT_TITLE")
-                    .fontWeight(.heavy)
-                    .fontWeight(.bold)
-                    .padding()
-                Info(title: $title, name: $name, location: $location, phone: $phone, description: $description)
-                
-                NavigationLink(destination: Comment()) {
-                    Text("Add a comment")
-                        .font(.caption)
-                }.padding(.bottom, 30)
-                
+        GeometryReader { geometry in
+            NavigationView {
+                VStack(alignment: .leading) {
+                    Text("Planting Trees In The Park")
+                        .fontWeight(.heavy)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .frame(height: geometry.size.height / 3)
+                    
+                    Info(title: $title, name: $name, location: $location, phone: $phone, description: $description)
+//                        .frame(width: 300)
+                    
+                    NavigationLink(destination: Comment()) {
+                        Text("Add A Comment")
+                            .font(.caption)
+
+                        
+                    }.padding(.bottom, 30)
+                        .frame(height: geometry.size.height / 2)
+                }
             }
+            
+            
         }
-        
     }
 }
 
@@ -59,19 +67,19 @@ struct Comment: View {
         NavigationView {
             VStack {
                 HStack {
-                Text("Body")
-                    .bold()
-                    .font(.largeTitle)
+                    Text("Add A Comment")
+                        .bold()
+                        .font(.largeTitle)
                 }
                 .padding(.bottom, 30)
-
+                
                 HStack {
                     Text("Subject")
                         .bold()
                     Spacer()
                 }
                 .padding(.bottom, 5)
-
+                
                 .padding(.bottom, 20)
                 HStack {
                     Text("Body")
@@ -79,7 +87,7 @@ struct Comment: View {
                     Spacer()
                 }
                 .padding(.bottom, 5)
-
+                
                 Spacer()
             }
             .padding()
