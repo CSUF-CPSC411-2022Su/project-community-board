@@ -15,14 +15,22 @@ struct ContentView: View {
     @State var description: String = "DESCRIPTION"
     
     var body: some View {
-        VStack {
-            Text("Information about INSERT_PROJECT_TITLE")
-                .fontWeight(.heavy)
-                .fontWeight(.bold)
-                .padding()
-            Info(title: $title, name: $name, location: $location, phone: $phone, description: $description)
+        NavigationView {
+            VStack {
+                Text("Information about INSERT_PROJECT_TITLE")
+                    .fontWeight(.heavy)
+                    .fontWeight(.bold)
+                    .padding()
+                Info(title: $title, name: $name, location: $location, phone: $phone, description: $description)
+                
+                NavigationLink(destination: Comment()) {
+                    Text("Add a comment")
+                        .font(.caption)
+                }.padding(.bottom, 30)
+                
+            }
         }
-
+        
     }
 }
 
@@ -41,6 +49,42 @@ struct Info: View {
     }
 }
 
+
+
+
+struct Comment: View {
+    @SceneStorage("commentSubject") var commentSubject: String = ""
+    @SceneStorage("commentBody") var commentBody: String = ""
+    var body: some View {
+        NavigationView {
+            VStack {
+                HStack {
+                Text("Crosswalk Submission")
+                    .bold()
+                    .font(.largeTitle)
+                }
+                .padding(.bottom, 30)
+
+                HStack {
+                    Text("Crosswalk Name")
+                        .bold()
+                    Spacer()
+                }
+                .padding(.bottom, 20)
+                HStack {
+                    Text("Crosswalk address")
+                        .bold()
+                    Spacer()
+                }
+                {
+                    Text("Submit")
+                }
+                Spacer()
+            }
+            .padding()
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
