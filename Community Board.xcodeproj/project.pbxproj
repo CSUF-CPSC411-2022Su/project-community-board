@@ -16,6 +16,8 @@
 		7A241E152851481D009BD84F /* Community_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241E142851481D009BD84F /* Community_BoardUITestsLaunchTests.swift */; };
 		7A241E2228514897009BD84F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E2128514897009BD84F /* .gitignore */; };
 		7A241E24285148E6009BD84F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E23285148E6009BD84F /* .gitattributes */; };
+		7A241E26285152CB009BD84F /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241E25285152CB009BD84F /* ProjectList.swift */; };
+		7A81110228608EF800E6A492 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81110128608EF700E6A492 /* User.swift */; };
 		7A2561F2286126F700048465 /* AddRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2561F1286126F700048465 /* AddRequestView.swift */; };
 		7A9B1BBB2863B6A90051536D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B1BBA2863B6A90051536D /* Posting.swift */; };
 		7A9B1BBD2863DC0A0051536D /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B1BBC2863DC0A0051536D /* Modifiers.swift */; };
@@ -51,6 +53,8 @@
 		7A241E142851481D009BD84F /* Community_BoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_BoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A241E2128514897009BD84F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A241E23285148E6009BD84F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		7A241E25285152CB009BD84F /* ProjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectList.swift; sourceTree = "<group>"; };
+		7A81110128608EF700E6A492 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A2561F1286126F700048465 /* AddRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestView.swift; sourceTree = "<group>"; };
 		7A9B1BBA2863B6A90051536D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		7A9B1BBC2863DC0A0051536D /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
@@ -87,7 +91,6 @@
 				7A241E23285148E6009BD84F /* .gitattributes */,
 				7A241E2128514897009BD84F /* .gitignore */,
 				7A241DF62851481A009BD84F /* Community Board */,
-				7A241E072851481D009BD84F /* Community BoardTests */,
 				7A241E112851481D009BD84F /* Community BoardUITests */,
 				7A241DF52851481A009BD84F /* Products */,
 			);
@@ -108,6 +111,8 @@
 			children = (
 				7A241DF72851481A009BD84F /* Community_BoardApp.swift */,
 				7A241DF92851481A009BD84F /* ContentView.swift */,
+				7A241E25285152CB009BD84F /* ProjectList.swift */,
+				7A81110128608EF700E6A492 /* User.swift */,
 				7A2561F1286126F700048465 /* AddRequestView.swift */,
 				7A9B1BBA2863B6A90051536D /* Posting.swift */,
 				7A241DFB2851481D009BD84F /* Assets.xcassets */,
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				7A241DFE2851481D009BD84F /* Preview Assets.xcassets */,
+				7A241E072851481D009BD84F /* Community BoardTests */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -274,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81110228608EF800E6A492 /* User.swift in Sources */,
 				7A9B1BBB2863B6A90051536D /* Posting.swift in Sources */,
 				7A241DFA2851481A009BD84F /* ContentView.swift in Sources */,
 				7A2561F2286126F700048465 /* AddRequestView.swift in Sources */,
 				7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */,
+				7A241E26285152CB009BD84F /* ProjectList.swift in Sources */,
 				7A9B1BBD2863DC0A0051536D /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
