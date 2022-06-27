@@ -17,11 +17,13 @@ struct ContentView: View {
                     HStack {
                         Text("Date")
                         Text("Date of project")
+                        Image(systemName: "calendar")
                     }
                     .padding()
                     HStack {
                         Text("Author")
                         Text("Author of project")
+                        Image(systemName: "person")
                     }
                     .padding()
                     HStack {
