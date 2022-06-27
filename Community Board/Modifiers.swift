@@ -17,3 +17,12 @@ struct ButtonDesign: ViewModifier {
             .cornerRadius(10)
     }
 }
+
+struct TextEntry: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(1)
+            .border(Color.blue)
+            .background(Color.white)
+    }
+}
