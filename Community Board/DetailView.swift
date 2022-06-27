@@ -1,6 +1,13 @@
+//
+//  DetailView.swift
+//  Community Board
+//
+//  Created by csuftitan on 6/27/22.
+//
 import SwiftUI
+import Foundation
 
-struct ContentView: View {
+struct DetailView: View {
     @StateObject var manager = CommentManager()
     var body: some View {
         
@@ -52,11 +59,5 @@ struct ContentView: View {
                 
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1FEF53286A53B300182C44 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FEF52286A53B300182C44 /* DetailView.swift */; };
 		7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241DF72851481A009BD84F /* Community_BoardApp.swift */; };
 		7A241DFA2851481A009BD84F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241DF92851481A009BD84F /* ContentView.swift */; };
 		7A241DFC2851481D009BD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A241DFB2851481D009BD84F /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1FEF52286A53B300182C44 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		7A241DF42851481A009BD84F /* Community Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A241DF72851481A009BD84F /* Community_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_BoardApp.swift; sourceTree = "<group>"; };
 		7A241DF92851481A009BD84F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				7A241DF72851481A009BD84F /* Community_BoardApp.swift */,
+				7A1FEF52286A53B300182C44 /* DetailView.swift */,
 				7A241DF92851481A009BD84F /* ContentView.swift */,
 				7A83F023286949CA00CC4FBB /* Comment.swift */,
 				7A83F025286949E600CC4FBB /* CommentViews.swift */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A241DFA2851481A009BD84F /* ContentView.swift in Sources */,
+				7A1FEF53286A53B300182C44 /* DetailView.swift in Sources */,
 				7A83F024286949CA00CC4FBB /* Comment.swift in Sources */,
 				7A83F026286949E600CC4FBB /* CommentViews.swift in Sources */,
 				7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */,

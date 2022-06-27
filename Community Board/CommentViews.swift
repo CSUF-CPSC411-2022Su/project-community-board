@@ -25,7 +25,7 @@ struct DetailedView: View {
                 }
             }
             
-        }
+        }.environmentObject(manager)
     }
 }
 
@@ -42,51 +42,53 @@ struct AddComment: View {
                         .bold()
                         .font(.largeTitle)
                 }
-                .padding(.bottom, 30)
-                
                 HStack {
                     Text("Comment Subject")
                         .bold()
-                    Spacer()
+//                    Spacer()
                 }
                 .padding(.bottom, 5)
                 HStack {
                     TextField("Comment Subject", text: $commentSubject)
                         .modifier(TextEntry())
-                    Spacer()
+//                    Spacer()
                 }
                 .padding(.bottom, 20)
                 HStack {
                     Text("Username")
                         .bold()
-                    Spacer()
+//                    Spacer()
                 }
                 .padding(.bottom, 5)
                 HStack {
                     TextField("Username", text: $commentUsername)
                         .modifier(TextEntry())
-                    Spacer()
+//                    Spacer()
                 }
                 .padding(.bottom, 20)
                 HStack {
                     Text("Comment Body")
                         .bold()
-                    Spacer()
+//                    Spacer()
                 }
                 .padding(.bottom, 5)
-                TextEditor(text: $commentBody)
+                TextField("Body", text: $commentBody)
                     .modifier(TextEntry())
 //                    .padding(.bottom, 30)
-                Button(action: {
-                    manager.comments.append(Comment(subject: commentSubject, body: commentBody, username: commentUsername))
-                    commentSubject = ""
-                    commentBody = ""
-                    commentUsername = ""
-                }) {
+//                Button(action: {
+//                    manager.comments.append(Comment(subject: commentSubject, body: commentBody, username: commentUsername))
+//                    commentSubject = ""
+//                    commentBody = ""
+//                    commentUsername = ""
+//                }) {
+//                    Text("Submit")
+//                        .modifier(ButtonDesign())
+//                }
+//                Spacer()
+                NavigationLink(destination: ContentView().navigationBarHidden(true))  {
                     Text("Submit")
-                        .modifier(ButtonDesign())
                 }
-                Spacer()
+                
             }
             .padding()
         }
