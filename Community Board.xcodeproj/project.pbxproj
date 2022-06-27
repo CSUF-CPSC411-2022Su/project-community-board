@@ -10,6 +10,9 @@
 		7A1CB479286A2C48003FF77E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB478286A2C48003FF77E /* SignUp.swift */; };
 		7A1CB47B286A2C7E003FF77E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB47A286A2C7E003FF77E /* MainMenu.swift */; };
 		7A1CB47D286A5A90003FF77E /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB47C286A5A90003FF77E /* SignIn.swift */; };
+		7A1FEF55286A642200182C44 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FEF54286A642200182C44 /* DetailView.swift */; };
+		7A1FEF57286A646700182C44 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FEF56286A646700182C44 /* Comment.swift */; };
+		7A1FEF59286A64A700182C44 /* CommentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FEF58286A64A700182C44 /* CommentViews.swift */; };
 		7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241DF72851481A009BD84F /* Community_BoardApp.swift */; };
 		7A241DFA2851481A009BD84F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241DF92851481A009BD84F /* ContentView.swift */; };
 		7A241DFC2851481D009BD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A241DFB2851481D009BD84F /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		7A1CB478286A2C48003FF77E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		7A1CB47A286A2C7E003FF77E /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		7A1CB47C286A5A90003FF77E /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		7A1FEF54286A642200182C44 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7A1FEF56286A646700182C44 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		7A1FEF58286A64A700182C44 /* CommentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViews.swift; sourceTree = "<group>"; };
 		7A241DF42851481A009BD84F /* Community Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A241DF72851481A009BD84F /* Community_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_BoardApp.swift; sourceTree = "<group>"; };
 		7A241DF92851481A009BD84F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 				7A1CB47A286A2C7E003FF77E /* MainMenu.swift */,
 				7A9B1BBA2863B6A90051536D /* Posting.swift */,
 				7A1CB47C286A5A90003FF77E /* SignIn.swift */,
+				7A1FEF56286A646700182C44 /* Comment.swift */,
+				7A1FEF54286A642200182C44 /* DetailView.swift */,
+				7A1FEF58286A64A700182C44 /* CommentViews.swift */,
 				7A241DFB2851481D009BD84F /* Assets.xcassets */,
 				7A241DFD2851481D009BD84F /* Preview Content */,
 				7A9B1BBC2863DC0A0051536D /* Modifiers.swift */,
@@ -291,10 +300,13 @@
 			files = (
 				7A81110228608EF800E6A492 /* User.swift in Sources */,
 				7A9B1BBB2863B6A90051536D /* Posting.swift in Sources */,
+				7A1FEF59286A64A700182C44 /* CommentViews.swift in Sources */,
 				7A241DFA2851481A009BD84F /* ContentView.swift in Sources */,
 				7A1CB47B286A2C7E003FF77E /* MainMenu.swift in Sources */,
 				7A2561F2286126F700048465 /* AddRequestView.swift in Sources */,
+				7A1FEF55286A642200182C44 /* DetailView.swift in Sources */,
 				7A1CB479286A2C48003FF77E /* SignUp.swift in Sources */,
+				7A1FEF57286A646700182C44 /* Comment.swift in Sources */,
 				7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */,
 				7A1CB47D286A5A90003FF77E /* SignIn.swift in Sources */,
 				7A241E26285152CB009BD84F /* ProjectList.swift in Sources */,
