@@ -16,6 +16,9 @@
 		7A241E152851481D009BD84F /* Community_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241E142851481D009BD84F /* Community_BoardUITestsLaunchTests.swift */; };
 		7A241E2228514897009BD84F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E2128514897009BD84F /* .gitignore */; };
 		7A241E24285148E6009BD84F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E23285148E6009BD84F /* .gitattributes */; };
+		7A83F024286949CA00CC4FBB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A83F023286949CA00CC4FBB /* Comment.swift */; };
+		7A83F026286949E600CC4FBB /* CommentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A83F025286949E600CC4FBB /* CommentViews.swift */; };
+		7A83F02828694A0900CC4FBB /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A83F02728694A0900CC4FBB /* Modifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		7A241E142851481D009BD84F /* Community_BoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_BoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A241E2128514897009BD84F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A241E23285148E6009BD84F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		7A83F023286949CA00CC4FBB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		7A83F025286949E600CC4FBB /* CommentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViews.swift; sourceTree = "<group>"; };
+		7A83F02728694A0900CC4FBB /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,11 @@
 		7A241DF62851481A009BD84F /* Community Board */ = {
 			isa = PBXGroup;
 			children = (
-				7A241DF92851481A009BD84F /* ContentView.swift */,
 				7A241DF72851481A009BD84F /* Community_BoardApp.swift */,
+				7A241DF92851481A009BD84F /* ContentView.swift */,
+				7A83F023286949CA00CC4FBB /* Comment.swift */,
+				7A83F025286949E600CC4FBB /* CommentViews.swift */,
+				7A83F02728694A0900CC4FBB /* Modifier.swift */,
 				7A241DFB2851481D009BD84F /* Assets.xcassets */,
 				7A241DFD2851481D009BD84F /* Preview Content */,
 			);
@@ -266,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A241DFA2851481A009BD84F /* ContentView.swift in Sources */,
+				7A83F024286949CA00CC4FBB /* Comment.swift in Sources */,
+				7A83F026286949E600CC4FBB /* CommentViews.swift in Sources */,
 				7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */,
+				7A83F02828694A0900CC4FBB /* Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
