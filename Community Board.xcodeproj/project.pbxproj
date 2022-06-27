@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1CB479286A2C48003FF77E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB478286A2C48003FF77E /* SignUp.swift */; };
+		7A1CB47B286A2C7E003FF77E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB47A286A2C7E003FF77E /* MainMenu.swift */; };
+		7A1CB47D286A5A90003FF77E /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB47C286A5A90003FF77E /* SignIn.swift */; };
 		7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241DF72851481A009BD84F /* Community_BoardApp.swift */; };
 		7A241DFA2851481A009BD84F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241DF92851481A009BD84F /* ContentView.swift */; };
 		7A241DFC2851481D009BD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A241DFB2851481D009BD84F /* Assets.xcassets */; };
@@ -17,8 +20,8 @@
 		7A241E2228514897009BD84F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E2128514897009BD84F /* .gitignore */; };
 		7A241E24285148E6009BD84F /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 7A241E23285148E6009BD84F /* .gitattributes */; };
 		7A241E26285152CB009BD84F /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A241E25285152CB009BD84F /* ProjectList.swift */; };
-		7A81110228608EF800E6A492 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81110128608EF700E6A492 /* User.swift */; };
 		7A2561F2286126F700048465 /* AddRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2561F1286126F700048465 /* AddRequestView.swift */; };
+		7A81110228608EF800E6A492 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81110128608EF700E6A492 /* User.swift */; };
 		7A9B1BBB2863B6A90051536D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B1BBA2863B6A90051536D /* Posting.swift */; };
 		7A9B1BBD2863DC0A0051536D /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B1BBC2863DC0A0051536D /* Modifiers.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1CB478286A2C48003FF77E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		7A1CB47A286A2C7E003FF77E /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		7A1CB47C286A5A90003FF77E /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		7A241DF42851481A009BD84F /* Community Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A241DF72851481A009BD84F /* Community_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_BoardApp.swift; sourceTree = "<group>"; };
 		7A241DF92851481A009BD84F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,8 +60,8 @@
 		7A241E2128514897009BD84F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A241E23285148E6009BD84F /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		7A241E25285152CB009BD84F /* ProjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectList.swift; sourceTree = "<group>"; };
-		7A81110128608EF700E6A492 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A2561F1286126F700048465 /* AddRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestView.swift; sourceTree = "<group>"; };
+		7A81110128608EF700E6A492 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A9B1BBA2863B6A90051536D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		7A9B1BBC2863DC0A0051536D /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,9 +118,12 @@
 				7A241DF72851481A009BD84F /* Community_BoardApp.swift */,
 				7A241DF92851481A009BD84F /* ContentView.swift */,
 				7A241E25285152CB009BD84F /* ProjectList.swift */,
+				7A1CB478286A2C48003FF77E /* SignUp.swift */,
 				7A81110128608EF700E6A492 /* User.swift */,
 				7A2561F1286126F700048465 /* AddRequestView.swift */,
+				7A1CB47A286A2C7E003FF77E /* MainMenu.swift */,
 				7A9B1BBA2863B6A90051536D /* Posting.swift */,
+				7A1CB47C286A5A90003FF77E /* SignIn.swift */,
 				7A241DFB2851481D009BD84F /* Assets.xcassets */,
 				7A241DFD2851481D009BD84F /* Preview Content */,
 				7A9B1BBC2863DC0A0051536D /* Modifiers.swift */,
@@ -283,8 +292,11 @@
 				7A81110228608EF800E6A492 /* User.swift in Sources */,
 				7A9B1BBB2863B6A90051536D /* Posting.swift in Sources */,
 				7A241DFA2851481A009BD84F /* ContentView.swift in Sources */,
+				7A1CB47B286A2C7E003FF77E /* MainMenu.swift in Sources */,
 				7A2561F2286126F700048465 /* AddRequestView.swift in Sources */,
+				7A1CB479286A2C48003FF77E /* SignUp.swift in Sources */,
 				7A241DF82851481A009BD84F /* Community_BoardApp.swift in Sources */,
+				7A1CB47D286A5A90003FF77E /* SignIn.swift in Sources */,
 				7A241E26285152CB009BD84F /* ProjectList.swift in Sources */,
 				7A9B1BBD2863DC0A0051536D /* Modifiers.swift in Sources */,
 			);

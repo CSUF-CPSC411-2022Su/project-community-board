@@ -11,7 +11,8 @@ class PostingManager: ObservableObject{
     @Published var PostList: [Post] = []
     
     init(){
-        PostList.append(Post(title: "I need help", body:"There is alot of junk"))
+        PostList.append(Post(title: "Cleaning out garage", body: "There is a lot of junk"))
+        PostList.append(Post(title: "Planting flowers", body: "Let's make our neighborhood look pretty!"))
     }
     
     func makePost(newPost: Post){
