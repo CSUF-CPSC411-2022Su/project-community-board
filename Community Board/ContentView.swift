@@ -22,7 +22,6 @@ struct ContentView: View {
         }
         else {
             SignIn(user: user).environmentObject(PostingManager())
-//            DetailView()
         }
     }
 }

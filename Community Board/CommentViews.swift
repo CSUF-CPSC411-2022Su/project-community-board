@@ -5,26 +5,6 @@ struct CommentListView: View {
     @ObservedObject var post: Post
     var body: some View {
         VStack (alignment: .center){
-//            List {
-//                ForEach(managerComment.comments) {
-//                    comment in
-//                    VStack (alignment: .leading) {
-//                        Text(comment.subject)
-//                            .font(.largeTitle)
-//
-//                        if(comment.username == "") {
-//                            Text(comment.username)
-//                                .font(.subheadline)
-//                        }
-//                        else {
-//                            Text("@" + comment.username)
-//                                .font(.subheadline)
-//                        }
-//                        Text(comment.body)
-//                            .font(.caption)
-//                    }
-//                }
-//            }
             List {
                 ForEach(post.comments) {
                     comment in
@@ -45,7 +25,7 @@ struct CommentListView: View {
                     }
                 }
             }
-
+            
         }
         .environmentObject(managerComment)
     }
@@ -68,36 +48,36 @@ struct AddComment: View {
                 HStack {
                     Text("Comment Subject")
                         .bold()
-//                    Spacer()
+                    Spacer()
                 }
                 .padding(.bottom, 5)
                 HStack {
                     TextField("Comment Subject", text: $commentSubject)
                         .modifier(TextEntry())
-//                    Spacer()
+                    Spacer()
                 }
                 .padding(.bottom, 20)
                 HStack {
                     Text("Username")
                         .bold()
-//                    Spacer()
+                    Spacer()
                 }
                 .padding(.bottom, 5)
                 HStack {
                     TextField("Username", text: $commentUsername)
                         .modifier(TextEntry())
-//                    Spacer()
+                    Spacer()
                 }
                 .padding(.bottom, 20)
                 HStack {
                     Text("Comment Body")
                         .bold()
-//                    Spacer()
+                    Spacer()
                 }
                 .padding(.bottom, 5)
                 TextField("Body", text: $commentBody)
                     .modifier(TextEntry())
-
+                
                 NavigationLink(destination: DetailView(post: post).navigationBarHidden(true))  {
                     Text("Submit")
                 }.simultaneousGesture(TapGesture().onEnded{
@@ -106,17 +86,6 @@ struct AddComment: View {
                     commentBody = ""
                     commentUsername = ""
                 })
-                
-//                Button(action: {
-//                    managerComment.comments.append(Comment(subject: commentSubject, body: commentBody, username: commentUsername))
-//                    commentSubject = ""
-//                    commentBody = ""
-//                    commentUsername = ""
-//                }) {
-//                    Text("Submit")
-//                        .modifier(ButtonDesign())
-//                }
-
             }
             .padding()
         }
