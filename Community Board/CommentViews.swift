@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct DetailedView: View {
-    @EnvironmentObject var manager: CommentManager
+    @EnvironmentObject var managerComment: CommentManager
     var body: some View {
         VStack (alignment: .center){
             List {
-                ForEach(manager.comments) {
+                ForEach(managerComment.comments) {
                     comment in
                     VStack (alignment: .leading) {
                         Text(comment.subject)
@@ -25,7 +25,8 @@ struct DetailedView: View {
                 }
             }
             
-        }.environmentObject(manager)
+        }
+        .environmentObject(managerComment)
     }
 }
 
@@ -33,7 +34,7 @@ struct AddComment: View {
     @AppStorage("commentSubject") var commentSubject: String = ""
     @AppStorage("commentBody") var commentBody: String = ""
     @AppStorage("commentUsername") var commentUsername: String = ""
-    @EnvironmentObject var manager: CommentManager
+    @EnvironmentObject var managerComment: CommentManager
     var body: some View {
         NavigationView {
             VStack {
@@ -77,8 +78,23 @@ struct AddComment: View {
 
                 NavigationLink(destination: DetailView().navigationBarHidden(true))  {
                     Text("Submit")
-                }
+                }.simultaneousGesture(TapGesture().onEnded{
+                    managerComment.comments.append(Comment(subject: "commentSubject", body: "commentBody", username: "commentUsername"))
+                    commentSubject = ""
+                    commentBody = ""
+                    commentUsername = ""
+                })
                 
+//                Button(action: {
+//                    managerComment.comments.append(Comment(subject: commentSubject, body: commentBody, username: commentUsername))
+//                    commentSubject = ""
+//                    commentBody = ""
+//                    commentUsername = ""
+//                }) {
+//                    Text("Submit")
+//                        .modifier(ButtonDesign())
+//                }
+
             }
             .padding()
         }

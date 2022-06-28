@@ -8,7 +8,7 @@ import SwiftUI
 import Foundation
 
 struct DetailView: View {
-    @StateObject var manager = CommentManager()
+    @StateObject var managerComment = CommentManager()
     var body: some View {
         
         NavigationView {
@@ -39,12 +39,12 @@ struct DetailView: View {
                     }
                     .padding()
                     DetailedView()
-                        .environmentObject(manager)
+                        .environmentObject(managerComment)
                 }
             
                 NavigationLink(destination: AddComment().navigationBarHidden(true))  {
                     Text("Add A Comment")
-                }.environmentObject(manager)
+                }.environmentObject(managerComment)
                 
             }
         }

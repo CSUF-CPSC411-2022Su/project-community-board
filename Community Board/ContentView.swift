@@ -15,12 +15,14 @@ struct ContentView: View {
     @State var attemptedUsername = ""
     @State var attemptedPassword = ""
     @EnvironmentObject var postingManager: PostingManager
+    @EnvironmentObject var managerComment: CommentManager
     var body: some View {
         if isLoggedIn {
             MainMenu(user: user).environmentObject(PostingManager())
         }
         else {
             SignIn(user: user).environmentObject(PostingManager())
+//            DetailView()
         }
     }
 }
