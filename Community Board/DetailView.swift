@@ -38,7 +38,10 @@ struct DetailView: View {
                         Text("body")
                     }
                     .padding()
+                    DetailedView()
+                        .environmentObject(manager)
                 }
+            
                 NavigationLink(destination: AddComment().navigationBarHidden(true))  {
                     Text("Add A Comment")
                 }.environmentObject(manager)
