@@ -16,11 +16,6 @@ struct MainMenu: View {
     @EnvironmentObject var manager: PostingManager
     @ObservedObject var post = Post(author: "", title: "", body: "")
     
-    @State var projectName = "Planting Flowers"
-    @State var projectType = "C"
-    @State var projectDate = "June 13"
-    @State var projectTime = "5:00 pm"
-    @State var projectList = ProjectList()
     var body: some View {
         NavigationView {
             VStack {
@@ -33,10 +28,12 @@ struct MainMenu: View {
                         VStack (alignment: .leading) {
                             NavigationLink(destination: DetailView(post: post)) {
                                 Text(post.title)
-                                    .font(.largeTitle)
+                                    .font(.title)
                             }
-                            Text(post.body)
+                            Text("Posted by: \(post.author)")
                                 .font(.caption)
+                            Text(post.date)
+                                .font(.footnote)
                         }
                     }
                 }
