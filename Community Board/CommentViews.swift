@@ -2,29 +2,50 @@ import SwiftUI
 
 struct CommentListView: View {
     @EnvironmentObject var managerComment: CommentManager
+    @ObservedObject var post: Post
     var body: some View {
         VStack (alignment: .center){
+//            List {
+//                ForEach(managerComment.comments) {
+//                    comment in
+//                    VStack (alignment: .leading) {
+//                        Text(comment.subject)
+//                            .font(.largeTitle)
+//
+//                        if(comment.username == "") {
+//                            Text(comment.username)
+//                                .font(.subheadline)
+//                        }
+//                        else {
+//                            Text("@" + comment.username)
+//                                .font(.subheadline)
+//                        }
+//                        Text(comment.body)
+//                            .font(.caption)
+//                    }
+//                }
+//            }
             List {
-                ForEach(managerComment.comments) {
+                ForEach(post.comments) {
                     comment in
                     VStack (alignment: .leading) {
                         Text(comment.subject)
-                            .font(.largeTitle)
+                            .font(.title3)
                         
                         if(comment.username == "") {
                             Text(comment.username)
-                                .font(.subheadline)
+                                .font(.footnote)
                         }
                         else {
-                            Text("@" + comment.username)
-                                .font(.subheadline)
+                            Text("@\(comment.username) - \(comment.date)")
+                                .font(.footnote)
                         }
                         Text(comment.body)
-                            .font(.caption)
+                            .font(.body)
                     }
                 }
             }
-            
+
         }
         .environmentObject(managerComment)
     }
@@ -80,7 +101,7 @@ struct AddComment: View {
                 NavigationLink(destination: DetailView(post: post).navigationBarHidden(true))  {
                     Text("Submit")
                 }.simultaneousGesture(TapGesture().onEnded{
-                    managerComment.comments.append(Comment(subject: "commentSubject", body: "commentBody", username: "commentUsername"))
+                    post.comments.append(Comment(subject: commentSubject, body: commentBody, username: commentUsername))
                     commentSubject = ""
                     commentBody = ""
                     commentUsername = ""

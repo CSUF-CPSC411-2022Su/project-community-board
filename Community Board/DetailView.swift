@@ -12,7 +12,6 @@ struct DetailView: View {
     @ObservedObject var post: Post
     var body: some View {
         
-        NavigationView {
             VStack {
                 VStack {
                 Text("Project Details")
@@ -35,18 +34,16 @@ struct DetailView: View {
                     }
                     .padding()
                     HStack {
-                        Text("Body")
-                        Text(post.body)
+                        Text(post.body).frame(width: 300).lineLimit(10)
                     }
-                    .padding()
-                    CommentListView()
+                    //.padding()
+                    CommentListView(post: post)
                 }
             
                 NavigationLink(destination: AddComment(post: post).navigationBarHidden(true))  {
                     Text("Add A Comment")
                 }
                 
-            }
-        }.environmentObject(managerComment)
+            }.environmentObject(managerComment)
     }
 }
