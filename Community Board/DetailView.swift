@@ -19,35 +19,34 @@ struct DetailView: View {
                     .font(.title)
                     HStack {
                         Text("Title")
-                        Text("title")
+                        Text(post.title)
                     }
                     .padding()
                     HStack {
                         Text("Date")
-                        Text("date")
+                        Text(post.date)
                         Image(systemName: "calendar")
                     }
                     .padding()
                     HStack {
                         Text("Author")
-                        Text("author")
+                        Text(post.author)
                         Image(systemName: "person")
                     }
                     .padding()
                     HStack {
                         Text("Body")
-                        Text("body")
+                        Text(post.body)
                     }
                     .padding()
-                    DetailedView()
-                        .environmentObject(managerComment)
+                    CommentListView()
                 }
             
                 NavigationLink(destination: AddComment(post: post).navigationBarHidden(true))  {
                     Text("Add A Comment")
-                }.environmentObject(managerComment)
+                }
                 
             }
-        }
+        }.environmentObject(managerComment)
     }
 }
