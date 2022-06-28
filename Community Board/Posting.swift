@@ -11,8 +11,8 @@ class PostingManager: ObservableObject{
     @Published var PostList: [Post] = []
     
     init(){
-        PostList.append(Post(title: "Cleaning out garage", body: "There is a lot of junk"))
-        PostList.append(Post(title: "Planting flowers", body: "Let's make our neighborhood look pretty!"))
+        PostList.append(Post(author: "John", title: "Cleaning out garage", body: "There is a lot of junk"))
+        PostList.append(Post(author: "Sarah", title: "Planting flowers", body: "Let's make our neighborhood look pretty!"))
     }
     
     func makePost(newPost: Post){
@@ -20,15 +20,15 @@ class PostingManager: ObservableObject{
     }
 }
 
-struct Post: Identifiable{
+class Post: Identifiable, ObservableObject {
     var id = UUID()
     var date: String
     var author: String
     var title: String
     var body: String
     
-    init(title: String, body: String){
-        self.author = "John"
+    init(author: String, title: String, body: String){
+        self.author = author
         self.date = ""
         
         self.title = title;
