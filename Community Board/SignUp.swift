@@ -37,7 +37,7 @@ struct SignUp: View {
                     NavigationLink(destination: ContentView(user: user).navigationBarHidden(true)) {
                         Text("Cancel").padding()
                     }
-                    NavigationLink(destination: MainMenu(user: user).navigationBarHidden(true).onAppear(perform: {
+                    NavigationLink(destination: MainMenu(user: user).environmentObject(PostingManager()).navigationBarHidden(true).onAppear(perform: {
                         username = user.username
                         password = user.password
                     })) {

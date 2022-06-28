@@ -17,15 +17,41 @@ struct ContentView: View {
     @EnvironmentObject var manager: PostingManager
     var body: some View {
         if isLoggedIn {
-            MainMenu(user: user)
+            MainMenu(user: user).environmentObject(PostingManager())
         }
         else {
-            SignIn(user: user)
+            NavigationView {
+                VStack {
+                    Text("Welcome to Community Board!").font(.headline)
+                    Spacer()
+                    HStack {
+                        Text("Username:")
+                            .frame(width: 90, alignment: .leading).padding(.leading)
+                        TextField("Username", text: $attemptedUsername)
+                    }
+                    HStack {
+                        Text("Password:")
+                            .frame(width: 90, alignment: .leading).padding(.leading)
+                        SecureField("Password", text: $attemptedPassword)
+                    }
+                    HStack {
+                        NavigationLink(destination: SignUp(user: user).navigationBarHidden(true)) {
+                            Text("Sign up").padding()
+                        }
+                        NavigationLink(destination: MainMenu(user: user).environmentObject(PostingManager()).navigationBarHidden(true).onAppear(perform: {
+                            username = user.username
+                            password = user.password
+                            isLoggedIn = true
+                        })) {
+                            Text("Log in").padding()
+                        }.disabled(attemptedUsername != username || attemptedPassword != password || attemptedUsername == "" || attemptedPassword == "")
+                    }
+                    Spacer()
+                }.environmentObject(PostingManager())
+            }
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
