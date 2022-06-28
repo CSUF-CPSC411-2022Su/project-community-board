@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 struct ProjectList: View {
-    @EnvironmentObject var manager: PostingManager
+    @EnvironmentObject var postingManager: PostingManager
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(manager.PostList) {
+                    ForEach(postingManager.PostList) {
                         post in
                         VStack (alignment: .leading) {
                             Text(post.title)

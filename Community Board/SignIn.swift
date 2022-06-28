@@ -15,7 +15,7 @@ struct SignIn: View {
     @AppStorage("isLoggedIn") var isLoggedIn = false
     @State var attemptedUsername = ""
     @State var attemptedPassword = ""
-    @EnvironmentObject var manager: PostingManager
+    @EnvironmentObject var postingManager: PostingManager
     var body: some View {
         NavigationView {
             VStack {
@@ -35,7 +35,7 @@ struct SignIn: View {
                     NavigationLink(destination: SignUp(user: user).navigationBarHidden(true)) {
                         Text("Sign up").padding()
                     }
-                    NavigationLink(destination: MainMenu(user: user).navigationBarHidden(true).onAppear(perform: {
+                    NavigationLink(destination: MainMenu(user: user).environmentObject(PostingManager()).navigationBarHidden(true).onAppear(perform: {
                         username = user.username
                         password = user.password
                         isLoggedIn = true

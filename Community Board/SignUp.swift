@@ -13,6 +13,7 @@ struct SignUp: View {
     @AppStorage("password") var password = ""
     @AppStorage("isLoggedIn") var isLoggedIn = false
     @ObservedObject var user: User
+    @EnvironmentObject var postingManager: PostingManager
     @State var confirmPassword = ""
     var body: some View {
         NavigationView {
