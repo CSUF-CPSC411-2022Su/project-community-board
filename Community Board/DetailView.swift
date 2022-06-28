@@ -39,15 +39,14 @@ struct DetailView: View {
                         Text(post.body)
                     }
                     .padding()
-                    DetailedView()
-                        .environmentObject(managerComment)
+                    CommentListView()
                 }
             
                 NavigationLink(destination: AddComment(post: post).navigationBarHidden(true))  {
                     Text("Add A Comment")
-                }.environmentObject(managerComment)
+                }
                 
             }
-        }
+        }.environmentObject(managerComment)
     }
 }

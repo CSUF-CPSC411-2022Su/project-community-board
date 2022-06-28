@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DetailedView: View {
+struct CommentListView: View {
     @EnvironmentObject var managerComment: CommentManager
     var body: some View {
         VStack (alignment: .center){
