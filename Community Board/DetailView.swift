@@ -9,6 +9,7 @@ import Foundation
 
 struct DetailView: View {
     @StateObject var managerComment = CommentManager()
+    @ObservedObject var post: Post
     var body: some View {
         
         NavigationView {
@@ -42,7 +43,7 @@ struct DetailView: View {
                         .environmentObject(managerComment)
                 }
             
-                NavigationLink(destination: AddComment().navigationBarHidden(true))  {
+                NavigationLink(destination: AddComment(post: post).navigationBarHidden(true))  {
                     Text("Add A Comment")
                 }.environmentObject(managerComment)
                 

@@ -14,6 +14,7 @@ struct MainMenu: View {
     @AppStorage("isLoggedIn") var isLoggedIn = true
     @ObservedObject var user: User
     @EnvironmentObject var manager: PostingManager
+    @ObservedObject var post = Post(author: "", title: "", body: "")
     
     @State var projectName = "Planting Flowers"
     @State var projectType = "C"
@@ -23,12 +24,17 @@ struct MainMenu: View {
     var body: some View {
         NavigationView {
             VStack {
+                NavigationLink(destination: AddRequestView(user: user)) {
+                    Text("Add post")
+                }
                 List {
                     ForEach(manager.PostList) {
                         post in
                         VStack (alignment: .leading) {
-                            Text(post.title)
-                                .font(.largeTitle)
+                            NavigationLink(destination: DetailView(post: post)) {
+                                Text(post.title)
+                                    .font(.largeTitle)
+                            }
                             Text(post.body)
                                 .font(.caption)
                         }

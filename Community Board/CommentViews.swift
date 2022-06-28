@@ -35,6 +35,7 @@ struct AddComment: View {
     @AppStorage("commentBody") var commentBody: String = ""
     @AppStorage("commentUsername") var commentUsername: String = ""
     @EnvironmentObject var managerComment: CommentManager
+    @ObservedObject var post: Post
     var body: some View {
         NavigationView {
             VStack {
@@ -76,7 +77,7 @@ struct AddComment: View {
                 TextField("Body", text: $commentBody)
                     .modifier(TextEntry())
 
-                NavigationLink(destination: DetailView().navigationBarHidden(true))  {
+                NavigationLink(destination: DetailView(post: post).navigationBarHidden(true))  {
                     Text("Submit")
                 }.simultaneousGesture(TapGesture().onEnded{
                     managerComment.comments.append(Comment(subject: "commentSubject", body: "commentBody", username: "commentUsername"))

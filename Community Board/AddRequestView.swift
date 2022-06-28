@@ -11,6 +11,7 @@ struct AddRequestView: View {
     @EnvironmentObject var manager: PostingManager
     @AppStorage("postTitle") var postTitle: String = ""
     @AppStorage("postBody") var postBody: String = ""
+    @ObservedObject var user: User
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -36,7 +37,7 @@ struct AddRequestView: View {
                     }
                     
                     Button(action: {
-                        manager.makePost(newPost: Post(title: postTitle, body: postBody))
+                        manager.makePost(newPost: Post(author: user.username, title: postTitle, body: postBody))
                         postBody = ""
                         postTitle = ""
                     }) {
@@ -87,8 +88,9 @@ struct EditableCrosswalkList: View {
         }
     }
 }
-struct AddRequestView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddRequestView()
-    }
-}
+
+//struct AddRequestView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddRequestView()
+//    }
+//}
