@@ -4,46 +4,45 @@
 //
 //  Created by csuftitan on 6/27/22.
 //
-import SwiftUI
 import Foundation
+import SwiftUI
 
 struct DetailView: View {
     @StateObject var managerComment = CommentManager()
+    @ObservedObject var user: User
     @ObservedObject var post: Post
     var body: some View {
-        
+        VStack {
             VStack {
-                VStack {
                 Text("Project Details")
                     .font(.title)
-                    HStack {
-                        Text("Title")
-                        Text(post.title)
-                    }
-                    .padding()
-                    HStack {
-                        Text("Date")
-                        Text(post.date)
-                        Image(systemName: "calendar")
-                    }
-                    .padding()
-                    HStack {
-                        Text("Author")
-                        Text(post.author)
-                        Image(systemName: "person")
-                    }
-                    .padding()
-                    HStack {
-                        Text(post.body).frame(width: 300).lineLimit(10)
-                    }
-                    //.padding()
-                    CommentListView(post: post)
+                HStack {
+                    Text(post.title).font(.headline)
                 }
-            
-                NavigationLink(destination: AddComment(post: post).navigationBarHidden(true))  {
-                    Text("Add A Comment")
+                .padding()
+                HStack {
+                    Image(systemName: "calendar")
+                    Text(post.date)
                 }
-                
-            }.environmentObject(managerComment)
+                .padding()
+                HStack {
+                    Image(systemName: "person")
+                    Text(post.author)
+                }
+                .padding()
+                HStack {
+                    Text(post.body).frame(width: 350).lineLimit(10)
+                }
+                CommentListView(post: post)
+            }
+            HStack {
+                NavigationLink(destination: MainMenu(user: user, post: post).navigationBarHidden(true)) {
+                    Text("Back").padding()
+                }
+                NavigationLink(destination: AddComment(user: user, post: post).navigationBarHidden(true)) {
+                    Text("Add comment").padding()
+                }
+            }
+        }.environmentObject(managerComment)
     }
 }

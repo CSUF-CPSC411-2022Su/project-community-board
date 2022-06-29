@@ -4,15 +4,12 @@ struct CommentListView: View {
     @EnvironmentObject var managerComment: CommentManager
     @ObservedObject var post: Post
     var body: some View {
-        VStack (alignment: .center){
+        VStack(alignment: .center) {
             List {
                 ForEach(post.comments) {
                     comment in
-                    VStack (alignment: .leading) {
-                        Text(comment.subject)
-                            .font(.title3)
-                        
-                        if(comment.username == "") {
+                    VStack(alignment: .leading) {
+                        if comment.username == "" {
                             Text(comment.username)
                                 .font(.footnote)
                         }
@@ -25,16 +22,15 @@ struct CommentListView: View {
                     }
                 }
             }
-            
         }
         .environmentObject(managerComment)
     }
 }
 
 struct AddComment: View {
-    @AppStorage("commentSubject") var commentSubject: String = ""
     @AppStorage("commentBody") var commentBody: String = ""
     @AppStorage("commentUsername") var commentUsername: String = ""
+    @ObservedObject var user: User
     @EnvironmentObject var managerComment: CommentManager
     @ObservedObject var post: Post
     var body: some View {
@@ -45,47 +41,19 @@ struct AddComment: View {
                         .bold()
                         .font(.largeTitle)
                 }
-                HStack {
-                    Text("Comment Subject")
-                        .bold()
-                    Spacer()
-                }
-                .padding(.bottom, 5)
-                HStack {
-                    TextField("Comment Subject", text: $commentSubject)
-                        .modifier(TextEntry())
-                    Spacer()
-                }
-                .padding(.bottom, 20)
-                HStack {
-                    Text("Username")
-                        .bold()
-                    Spacer()
-                }
-                .padding(.bottom, 5)
-                HStack {
-                    TextField("Username", text: $commentUsername)
-                        .modifier(TextEntry())
-                    Spacer()
-                }
-                .padding(.bottom, 20)
-                HStack {
-                    Text("Comment Body")
-                        .bold()
-                    Spacer()
-                }
-                .padding(.bottom, 5)
-                TextField("Body", text: $commentBody)
+                TextEditor(text: $commentBody)
                     .modifier(TextEntry())
-                
-                NavigationLink(destination: DetailView(post: post).navigationBarHidden(true))  {
-                    Text("Submit")
-                }.simultaneousGesture(TapGesture().onEnded{
-                    post.comments.append(Comment(subject: commentSubject, body: commentBody, username: commentUsername))
-                    commentSubject = ""
-                    commentBody = ""
-                    commentUsername = ""
-                })
+                HStack {
+                    NavigationLink(destination: DetailView(user: user, post: post).navigationBarHidden(true)) {
+                        Text("Cancel").padding()
+                    }
+                    NavigationLink(destination: DetailView(user: user, post: post).navigationBarHidden(true)) {
+                        Text("Submit").padding()
+                    }.simultaneousGesture(TapGesture().onEnded {
+                        post.comments.append(Comment(body: commentBody, username: user.username))
+                        commentBody = ""
+                    })
+                }
             }
             .padding()
         }

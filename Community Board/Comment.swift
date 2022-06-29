@@ -3,30 +3,26 @@ import SwiftUI
 
 class CommentManager: ObservableObject {
     @Published var comments: [Comment] = []
-    
+
     init() {
-        comments.append(Comment(subject: "Comments", body: "", username: ""))
+        comments.append(Comment(body: "", username: ""))
     }
 }
 
 struct Comment: Identifiable {
     var id = UUID()
-    var subject: String
     var body: String
     var username: String
     var date: String
-    
-    init(subject: String, body: String, username: String){
-        self.subject = subject
+
+    init(body: String, username: String) {
         self.body = body
         self.username = username
         self.date = ""
         self.date = getDate()
-        
     }
-    
-    func getDate() -> String
-    {
+
+    func getDate() -> String {
         // get the current date and time
         let currentDateTime = Date()
 
