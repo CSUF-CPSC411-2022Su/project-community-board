@@ -16,26 +16,27 @@ struct AddRequestView: View {
         GeometryReader { geometry in
             VStack {
                 VStack {
-                    Text("Make a post")
-                    HStack { // Variation 2
+                    Text("Make a post").font(.largeTitle)
+                    HStack {
+                        Spacer()
                         Text("Title: ")
                             .frame(width: 100)
                             .border(Color.black)
                         TextField("Title", text: $postTitle)
-                            .frame(width: 200)
+                            .frame(width: 250)
                             .border(Color.black)
                         Spacer()
                     }
-                    HStack { // Variation 2
+                    HStack {
+                        Spacer()
                         Text("Body: ")
                             .frame(width: 100)
                             .border(Color.black)
                         TextEditor(text: $postBody)
-                            .frame(width: 200)
+                            .frame(width: 250)
                             .border(Color.black)
                         Spacer()
                     }
-                    
                     Button(action: {
                         manager.makePost(newPost: Post(author: user.username, title: postTitle, body: postBody))
                         postBody = ""
@@ -44,53 +45,8 @@ struct AddRequestView: View {
                         Text("Submit")
                             .modifier(ButtonDesign())
                     }
-                    
-                }.frame(height: geometry.size.height / 2)
-                
-                VStack{
-                }
-                
+                }.frame(height: 3 * geometry.size.height / 4)
             }
         }
     }
 }
-struct EditableCrosswalkList: View {
-    @EnvironmentObject var manager: PostingManager
-    var body: some View {
-        VStack {
-            // TODO: Model 3 - Add the EditButton here
-            EditButton()
-
-            List {
-                /// ForEach requires each element in the collection it traverses to be Identifiable
-                // TODO: Model 2 - Add the onDelete method below
-                ForEach(manager.PostList) {
-                    crosswalk in
-                    VStack (alignment: .leading) {
-                        Text(crosswalk.date)
-                            .font(.largeTitle)
-                        Text(crosswalk.body)
-                            .font(.caption)
-                    }
-                }.onDelete {
-                    offset in
-                    manager.PostList.remove(atOffsets: offset)
-                }.onMove {
-                    offset, index in
-                    manager.PostList.move(fromOffsets: offset,
-                                            toOffset: index)
-                }
-
-
-                // TODO: Model 3 - Add the onMove method below
-
-            }
-        }
-    }
-}
-
-//struct AddRequestView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddRequestView()
-//    }
-//}

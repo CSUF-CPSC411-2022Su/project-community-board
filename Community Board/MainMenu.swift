@@ -17,32 +17,37 @@ struct MainMenu: View {
     @ObservedObject var post = Post(author: "", title: "", body: "")
     
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: AddRequestView(user: user)) {
-                    Text("Add post")
-                }
-                List {
-                    ForEach(manager.PostList) {
-                        post in
-                        VStack (alignment: .leading) {
-                            NavigationLink(destination: DetailView(post: post)) {
-                                Text(post.title)
-                                    .font(.title)
+        GeometryReader { geometry in
+            NavigationView {
+                VStack {
+                    Text("Hello \(username)!").font(.headline)
+                    List {
+                        ForEach(manager.PostList) {
+                            post in
+                            VStack (alignment: .leading) {
+                                NavigationLink(destination: DetailView(user: user, post: post).navigationBarHidden(true)) {
+                                    Text(post.title)
+                                        .font(.title)
+                                }
+                                Text("Posted by: \(post.author)")
+                                    .font(.caption)
+                                Text(post.date)
+                                    .font(.footnote)
                             }
-                            Text("Posted by: \(post.author)")
-                                .font(.caption)
-                            Text(post.date)
-                                .font(.footnote)
                         }
                     }
-                }
-                NavigationLink(destination: ContentView(user: user).navigationBarHidden(true).onAppear(perform: {
-                    isLoggedIn = false
-                })) {
-                    Text("Log out").padding()
-                }
-            }.environmentObject(PostingManager())
+                    HStack {
+                        NavigationLink(destination: ContentView(user: user).navigationBarHidden(true).onAppear(perform: {
+                            isLoggedIn = false
+                        })) {
+                            Text("Log out").padding()
+                        }
+                        NavigationLink(destination: AddRequestView(user: user)) {
+                            Text("Add post").padding()
+                        }
+                    }
+                }.environmentObject(PostingManager())
+            }
         }
     }
 }

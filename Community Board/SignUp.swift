@@ -44,7 +44,7 @@ struct SignUp: View {
                     })) {
                         Text("Sign up").padding()
                     }.disabled(user.username == "" || user.password.count < 4 ||
-                               user.password != confirmPassword)
+                        user.password != confirmPassword)
                 }
             }
         }

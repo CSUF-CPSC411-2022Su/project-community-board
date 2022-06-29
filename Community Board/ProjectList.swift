@@ -16,7 +16,7 @@ struct ProjectList: View {
                 List {
                     ForEach(postingManager.PostList) {
                         post in
-                        VStack (alignment: .leading) {
+                        VStack(alignment: .leading) {
                             Text(post.title)
                                 .font(.largeTitle)
                             Text(post.body)
